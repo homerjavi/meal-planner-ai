@@ -1,0 +1,7 @@
+@import "/vendor/filament/filament/resources/css/theme.css";
+
+@config 'tailwind.config.js';
+
+h1 {
+    @apply text-2xl font-bold tracking-tight text-gray-950 dark:text-white sm:text-3xl;
+}

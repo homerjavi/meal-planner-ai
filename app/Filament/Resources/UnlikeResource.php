@@ -3,36 +3,28 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\UnlikeResource\Pages;
-use App\Filament\Resources\UnlikeResource\RelationManagers;
 use App\Models\Unlike;
-use App\Models\User;
-use Faker\Provider\ar_EG\Text;
-// use Filament\Actions\Action;
-use Filament\Forms;
-use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Symfony\Component\Console\Input\Input;
 
 class UnlikeResource extends Resource
 {
     protected static ?string $model = Unlike::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-hand-thumb-down';
-    protected static ?int $navigationSort = 3;
+    // protected static ?string $navigationIcon = 'heroicon-o-face-frown';
+    protected static ?int $navigationSort = 50;
 
     private static function formFields(): array
     {
         return [
             TextInput::make('name')
-                ->label('Name')
+                ->label('messages.name')
+                ->translateLabel()
                 ->required(),
         ];
     }

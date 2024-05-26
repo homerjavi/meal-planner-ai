@@ -25,7 +25,7 @@ class ExerciseResource extends Resource
     protected static ?string $model = Exercise::class;
 
     protected static ?string $navigationIcon = 'fas-person-snowboarding';
-    protected static ?int $navigationSort = 5;
+    protected static ?int $navigationSort = 60;
 
     private static function formFields(): array
     {

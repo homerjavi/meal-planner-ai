@@ -2,9 +2,13 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Pages\Planning;
+use App\Filament\Pages\Profile;
+use App\Filament\Pages\User;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\MenuItem;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -24,22 +28,28 @@ class AdminPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+            ->viteTheme('resources/css/filament/admin/theme.css')
             ->default()
             ->id('admin')
             ->path('admin')
+            // ->login(\Filament\Pages\Auth\Login::class)
             ->login()
+            ->registration()
+            ->passwordReset()
+            ->emailVerification()
             ->colors([
                 'primary' => Color::Indigo,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
-                Pages\Dashboard::class,
+                // Pages\Dashboard::class,
+                Planning::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                // Widgets\AccountWidget::class,
+                // // Widgets\FilamentInfoWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -51,6 +61,12 @@ class AdminPanelProvider extends PanelProvider
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
+            ])
+            ->userMenuItems([
+                MenuItem::make()
+                    ->label('Profile')
+                    ->url(fn (): string => Profile::getUrl())
+                    ->icon('heroicon-o-user'),
             ])
             ->authMiddleware([
                 Authenticate::class,

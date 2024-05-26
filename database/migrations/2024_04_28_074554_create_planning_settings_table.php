@@ -20,9 +20,10 @@ return new class extends Migration
             $table->foreignIdFor(Family::class)->nullable()->constrained()->cascadeOnDelete();
             $table->enum('planning_type', array_keys(PlanningSettings::PLANNING_TYPE))->default(array_key_first(PlanningSettings::PLANNING_TYPE));
             $table->string('food_type', 255)->nullable();
-            $table->json('days');
             $table->unsignedTinyInteger('number_of_meals_per_day')->default(3);
             $table->text('additional_info')->nullable();
+            $table->json('days');
+            $table->json('family_members')->nullable();
             $table->timestamps();
         });
     }

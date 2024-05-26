@@ -6,6 +6,8 @@ use App\Casts\Json;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class PlanningSettings extends Model
 {
@@ -19,12 +21,13 @@ class PlanningSettings extends Model
     protected $fillable = [
         'planning_type',
         'food_type',
-        'days',
         'number_of_meals_per_day',
+        'days',
+        'family_members',
         'additional_info',
     ];
 
-    static function boot()
+    static function boot(): void
     {
         parent::boot();
 
@@ -37,10 +40,11 @@ class PlanningSettings extends Model
     {
         return [
             'days' => Json::class,
+            'family_members' => Json::class,
         ];
     }
 
-    public function setDaysAttribute($value)
+    public function setDaysAttribute($value): void
     {
         if (is_array($value)) {
             usort($value, function ($a, $b) {
@@ -62,4 +66,19 @@ class PlanningSettings extends Model
 
         return $translatedPlanningTypes;
     }
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function family(): BelongsTo
+    {
+        return $this->belongsTo(Family::class);
+    }
+
+    // public function familyMembers(): HasMany
+    // {
+    //     return $this->family->users();
+    // }
 }

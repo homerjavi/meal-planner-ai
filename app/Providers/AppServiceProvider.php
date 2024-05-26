@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use Filament\Support\Assets\Js;
+use Filament\Support\Facades\FilamentAsset;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +21,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        FilamentAsset::register([
+            Js::make('livewire-sortable', 'https://cdn.jsdelivr.net/gh/livewire/sortable@v1.x.x/dist/livewire-sortable.js')->loadedOnRequest(),
+        ]);
+
+        // Filament::registerScripts([
+        //     Vite::asset('https://cdn.jsdelivr.net/gh/livewire/sortable@v1.x.x/dist/livewire-sortable.js'),
+        // ]);
     }
 }
