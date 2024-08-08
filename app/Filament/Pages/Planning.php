@@ -165,11 +165,32 @@ class Planning extends Page
     public function updateMealOrder($mealsPerDayAndHours)
     {
         // $this->mealsPerDayAndHours = $mealsPerDayAndHours;
-        dd($mealsPerDayAndHours);
+        // dd($mealsPerDayAndHours);
     }
 
     public function getTitle(): string | Htmlable
     {
         return '';
+    }
+
+    protected $listeners = [
+        'elementDragStart' => 'handleDragStart',
+        'elementDragEnter' => 'handleDragEnter',
+        'elementDragStop' => 'handleDragStop',
+    ];
+
+    public function handleDragStart($event)
+    {
+        // Lógica para manejar el evento dragstart
+    }
+
+    public function handleDragEnter($event)
+    {
+        // Lógica para manejar el evento dragenter
+    }
+
+    public function handleDragStop($event)
+    {
+        // Lógica para manejar el evento dragstop
     }
 }

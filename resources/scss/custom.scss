@@ -1,0 +1,17 @@
+.jope {
+    color: red !important;
+}
+
+.sortable-item {
+    width: fit-content;
+    border-radius: 16px;
+    cursor: grabbing;
+    transition: all 1s;
+}
+
+.draggable-source--is-dragging {
+    background-color: aqua !important;
+}
+.draggable--over {
+    background-color: aqua !important;
+}

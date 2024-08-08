@@ -1,9 +1,50 @@
 <x-filament-panels::page>
     @assets
+        <script>
+            // document.addEventListener('livewire:initialized', function() {
+            //     // debugger;
+            //     function test() {
+            //         console.log('test');
+            //     }
+
+            //     function initializeSortableItems() {
+            //         console.log("initializeSortableItems");
+            //         const items = document.querySelectorAll('.sortable-item');
+            //         items.forEach((item) => {
+            //             item.addEventListener('dragstart', () => {
+            //                 item.classList.add('sortable-item-dragging');
+            //                 console.log('dragstart');
+            //             });
+            //             item.addEventListener('dragend', () => {
+            //                 item.classList.remove('sortable-item-dragging');
+            //                 console.log('dragend');
+            //             });
+            //         });
+            //     }
+
+            //     // Initialize sortable items on load
+            //     initializeSortableItems();
+
+            //     // Reinitialize sortable items after Livewire updates
+            //     Livewire.hook('message.processed', (message, component) => {
+            //         console.log('message.processed');
+            //         initializeSortableItems();
+            //     });
+            // });
+        </script>
+
         <script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v1.x.x/dist/livewire-sortable.js" defer></script>
+        {{-- <style>
+            .sortable-item-dragging {
+                border: 2px solid blue;
+                background-color: #2d3748;
+                /* bg-gray-800 */
+                color: red;
+            }
+        </style> --}}
     @endassets
     <section class="py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-extrabold text-white sm:text-5xl">
                     Planning
@@ -17,22 +58,7 @@
                 @foreach ($mealsPerDayAndHours as $mealsDay)
                     <x-day-card :mealsDay="$mealsDay" />
                 @endforeach
-                {{-- <ul wire:sortable="updateMealOrder">
-                    @forelse ($mealsPerDayAndHours[0]['hours'][0]['meals'] as $meal)
-                        <li wire:sortable.handle wire:sortable.item="{{ $meal['id'] }}"
-                            wire:key="meal-{{ $meal['id'] }}" class="flex items-center">
-                            <x-filament::icon-button icon="heroicon-o-bars-3" color="primary" />
-                            <span class="mx-2">{{ $meal['name'] }}</span>
-                        </li>
-                    @empty
-                        <span>No hay nada</span>
-                    @endforelse
-                </ul> --}}
             </div>
         </div>
     </section>
-
-    {{-- @livewireScripts
-    <script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v1.x.x/dist/livewire-sortable.js"></script> --}}
-
 </x-filament-panels::page>

@@ -1,7 +1,10 @@
 @import "/vendor/filament/filament/resources/css/theme.css";
+@import "/resources/scss/custom.scss";
 
 @config 'tailwind.config.js';
 
-h1 {
-    @apply text-2xl font-bold tracking-tight text-gray-950 dark:text-white sm:text-3xl;
+@layer base {
+    h1 {
+        @apply text-2xl text-blue-500 font-bold tracking-tight  dark:text-red-300 sm:text-3xl;
+    }
 }

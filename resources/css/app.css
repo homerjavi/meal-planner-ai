@@ -1,8 +1,11 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
+@tailwind utilities; */
 /* En tu archivo de estilos CSS */
 /* .h1 {
     @apply text-2xl font-bold tracking-tight text-gray-950 dark:text-white sm:text-3xl;
+} */
+
+/* .jope {
+    color: red !important;
 } */
