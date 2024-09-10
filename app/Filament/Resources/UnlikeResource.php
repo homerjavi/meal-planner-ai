@@ -16,7 +16,7 @@ class UnlikeResource extends Resource
     protected static ?string $model = Unlike::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-hand-thumb-down';
-    // protected static ?string $navigationIcon = 'heroicon-o-face-frown';
+    
     protected static ?int $navigationSort = 50;
 
     private static function formFields(): array

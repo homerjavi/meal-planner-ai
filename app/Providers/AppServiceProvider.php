@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\AnthropicService;
 use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
@@ -14,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->singleton(AnthropicService::class, function ($app) {
+            return new AnthropicService();
+        });
     }
 
     /**

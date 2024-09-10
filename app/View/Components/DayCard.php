@@ -12,7 +12,7 @@ class DayCard extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public array $mealsDay
+        public array $dayData
     ) {
     }
 

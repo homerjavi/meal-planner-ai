@@ -18,6 +18,7 @@ use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Model;
 
 class PlanningSettingsResource extends Resource
 {
@@ -37,7 +38,9 @@ class PlanningSettingsResource extends Resource
                     ->default(array_key_first(PlanningSettings::PLANNING_TYPE))
                     ->native(false)
                     ->live()
-                    ->required(),
+                    ->required()
+                    ->disabled(!auth()->user()->family_id)
+                    ->helperText(fn() => !auth()->user()->family_id ? 'No puedes seleccionar "Family" si no tienes una familia asignada' : null),
                 TextInput::make('food_type')
                     ->label('messages.food_type')
                     ->translateLabel()
@@ -72,6 +75,23 @@ class PlanningSettingsResource extends Resource
                     ->columnSpanFull()
                     ->rows(5),
             ])->columns(3);
+    }
+
+    protected function handleRecordCreation(array $data): Model
+    {
+        if ($data['planning_type'] === 'family') {
+            $data['family_id'] = auth()->user()->family_id;
+        }
+        return static::getModel()::create($data);
+    }
+
+    protected function handleRecordUpdate(Model $record, array $data): Model
+    {
+        if ($data['planning_type'] === 'family') {
+            $data['family_id'] = auth()->user()->family_id;
+        }
+        $record->update($data);
+        return $record;
     }
 
     public static function table(Table $table): Table

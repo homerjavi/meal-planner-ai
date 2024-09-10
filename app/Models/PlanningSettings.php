@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Collection;
 
 class PlanningSettings extends Model
 {
@@ -77,8 +78,10 @@ class PlanningSettings extends Model
         return $this->belongsTo(Family::class);
     }
 
-    // public function familyMembers(): HasMany
-    // {
-    //     return $this->family->users();
-    // }
+    public function getUsers(): Collection
+    {
+        return $this->family_id 
+            ? $this->family->users 
+            : collect([$this->user]);
+    }
 }

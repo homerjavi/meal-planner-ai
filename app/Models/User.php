@@ -71,4 +71,19 @@ class User extends Authenticatable
     {
         return $this->family?->users->pluck('name', 'id')->toArray() ?? [];
     }
+
+    public function likes(): HasMany
+    {
+        return $this->hasMany(Like::class);
+    }
+
+    public function unlikes(): HasMany
+    {
+        return $this->hasMany(Unlike::class);
+    }
+
+    public function exercises(): HasMany
+    {
+        return $this->hasMany(Exercise::class);
+    }
 }

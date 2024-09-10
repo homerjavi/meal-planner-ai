@@ -8,5 +8,6 @@ export default {
         "./vendor/filament/**/*.blade.php",
         "./app/View/Components/**/*.php",
         "./resources/views/components/**/*.blade.php",
+        "./resources/views/livewire/**/*.blade.php",
     ],
 };

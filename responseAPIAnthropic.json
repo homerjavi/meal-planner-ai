@@ -1,0 +1,18 @@
+{
+  "id": "msg_012ciKanmpR6usQ1KzWKQfob",
+  "type": "message",
+  "role": "assistant",
+  "model": "claude-3-sonnet-20240229",
+  "content": [
+      {
+          "type": "text",
+          "text": "Aquí tienes un ejemplo de un planning semanal de comidas generado a partir de la información proporcionada en el JSON:\n\n```json\n{\n  \"mealPlan\": {\n    \"weekDays\": [\n      {\n        \"day\": \"monday\",\n        \"turns\": [\n          {\n            \"name\": \"breakfast\",\n            \"meals\": [\n              {\n                \"name\": \"Smoothie de plátano y aguacate\",\n                \"calories\": 350,\n                \"recipe\": [\n                  \"1 plátano\",\n                  \"1/2 aguacate\",\n                  \"1 taza de leche de almendras\",\n                  \"1 cucharada de miel\"\n                ]\n              }\n            ]\n          },\n          {\n            \"name\": \"lunch\",\n            \"meals\": [\n              {\n                \"name\": \"Ensalada de pollo empanado\",\n                \"calories\": 450,\n                \"recipe\": [\n                  \"200g de pechuga de pollo empanada\",\n                  \"Lechuga\",\n                  \"Tomate\",\n                  \"Cebolla\",\n                  \"Aderezo de yogur\"\n                ]\n              }\n            ]\n          },\n          {\n            \"name\": \"dinner\",\n            \"meals\": [\n              {\n                \"name\": \"Pizza vegetariana\",\n                \"calories\": 600,\n                \"recipe\": [\n                  \"Masa de pizza integral\",\n                  \"Salsa de tomate\",\n                  \"Queso mozzarella\",\n                  \"Champiñones\",\n                  \"Pimientos\",\n                  \"Cebolla\"\n                ]\n              }\n            ]\n          }\n        ]\n      },\n      // ... (resto de días de la semana)\n    ],\n    \"additionalNotes\": \"Este plan de comidas está diseñado para un estilo de vida saludable, teniendo en cuenta las preferencias y actividades físicas de los usuarios. Se recomienda beber suficiente agua y complementar con aperitivos saludables entre comidas.\"\n  }\n}\n```\n\nEste plan de comidas se ha generado teniendo en cuenta los siguientes factores:\n\n1. **Edad de los usuarios**: Se han incluido comidas típicas y populares que suelen gustar a personas en la franja de edad de 39-40 años.\n\n2. **Preferencias y aversiones alimentarias**: Se han incluido alimentos que los usuarios han indicado que les gustan, como pollo empanado, pizza, aguacate y plátano, y se han evitado los que no les gustan, como judías, roquefort y aceitunas.\n\n3. **Actividad física**: Dado que uno de los usuarios practica ejercicios como remo y running con una intensidad media, se han incluido comidas con un aporte calórico adecuado para satisfacer sus necesidades energéticas.\n\n4. **Tipo de comida**: El JSON especifica que el tipo de comida debe ser \"Saludable\", por lo que se han incluido opciones equilibradas y nutritivas, como ensaladas, smoothies y pizzas vegetarianas con masa integral.\n\nPuedes ajustar este plan de comidas según tus necesidades específicas y las de los usuarios."
+      }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "usage": {
+      "input_tokens": 702,
+      "output_tokens": 797
+  }
+}

@@ -1,0 +1,480 @@
+{
+    "mealPlan": {
+      "weekDays": [
+        {
+          "day": "Lunes",
+          "turns": [
+            {
+              "name": "Desayuno",
+              "meals": [
+                {
+                  "name": "Tostadas de pan integral con aguacate machacado y huevo revuelto",
+                  "calories": 300,
+                  "recipe": [
+                    "Tostar el pan integral",
+                    "Machacar el aguacate y extenderlo sobre la tostada",
+                    "Hacer huevos revueltos y colocarlos encima"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Almuerzo",
+              "meals": [
+                {
+                  "name": "Nuggets de pollo caseros al horno",
+                  "calories": 250,
+                  "recipe": [
+                    "Cortar el pollo en trozos pequeños",
+                    "Rebozar el pollo en pan rallado y hornear"
+                  ]
+                },
+                {
+                  "name": "Puré de patata y zanahorias baby",
+                  "calories": 150,
+                  "recipe": [
+                    "Hacer puré de patata",
+                    "Cocer al vapor las zanahorias baby"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Cena",
+              "meals": [
+                {
+                  "name": "Sopa de estrellitas con verduras y trocitos de pollo",
+                  "calories": 300,
+                  "recipe": [
+                    "Cocer pasta de estrellitas en caldo de pollo",
+                    "Añadir verduras picadas y trozos pequeños de pollo cocido",
+                    "Dejar cocer hasta que la pasta esté al dente"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "day": "Martes",
+          "turns": [
+            {
+              "name": "Desayuno",
+              "meals": [
+                {
+                  "name": "Yogur natural con cereales integrales y rodajas de plátano",
+                  "calories": 250,
+                  "recipe": [
+                    "Servir yogur natural en un bol",
+                    "Añadir cereales integrales",
+                    "Cortar el plátano en rodajas y colocar encima"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Almuerzo",
+              "meals": [
+                {
+                  "name": "Macarrones con salsa de tomate casera y queso rallado",
+                  "calories": 400,
+                  "recipe": [
+                    "Cocer los macarrones según las instrucciones del paquete",
+                    "Preparar una salsa de tomate casera",
+                    "Mezclar la pasta con la salsa y añadir queso rallado por encima"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Merienda",
+              "meals": [
+                {
+                  "name": "Fruta fresca de temporada",
+                  "calories": 100,
+                  "recipe": [
+                    "Lavar y cortar la fruta si es necesario"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Cena",
+              "meals": [
+                {
+                  "name": "Tortilla francesa con jamón york",
+                  "calories": 250,
+                  "recipe": [
+                    "Batir los huevos y hacer una tortilla francesa",
+                    "Rellenar con jamón york"
+                  ]
+                },
+                {
+                  "name": "Palitos de zanahoria",
+                  "calories": 50,
+                  "recipe": [
+                    "Cortar zanahorias en palitos para acompañar"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "day": "Miércoles",
+          "turns": [
+            {
+              "name": "Desayuno",
+              "meals": [
+                {
+                  "name": "Gachas de avena con manzana rallada y canela",
+                  "calories": 300,
+                  "recipe": [
+                    "Cocinar la avena con leche",
+                    "Rallar una manzana y añadirla a la avena",
+                    "Espolvorear con canela al servir"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Almuerzo",
+              "meals": [
+                {
+                  "name": "Hamburguesa casera de pavo",
+                  "calories": 300,
+                  "recipe": [
+                    "Preparar la carne de pavo con especias y formar las hamburguesas",
+                    "Cocinar las hamburguesas a la plancha"
+                  ]
+                },
+                {
+                  "name": "Ensalada de lechuga y tomate",
+                  "calories": 50,
+                  "recipe": [
+                    "Lavar y cortar la lechuga y el tomate",
+                    "Aliñar con un poco de aceite de oliva y sal"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Cena",
+              "meals": [
+                {
+                  "name": "Crema de calabaza",
+                  "calories": 200,
+                  "recipe": [
+                    "Cocinar calabaza con cebolla y un poco de patata",
+                    "Triturar hasta obtener una crema suave"
+                  ]
+                },
+                {
+                  "name": "Tostadas integrales",
+                  "calories": 100,
+                  "recipe": [
+                    "Tostar el pan integral"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "day": "Jueves",
+          "turns": [
+            {
+              "name": "Desayuno",
+              "meals": [
+                {
+                  "name": "Batido de plátano y fresas",
+                  "calories": 200,
+                  "recipe": [
+                    "Pelar el plátano y lavar las fresas",
+                    "Licuar el plátano, las fresas y la leche hasta obtener un batido suave"
+                  ]
+                },
+                {
+                  "name": "Tostada integral con mantequilla de cacahuete",
+                  "calories": 150,
+                  "recipe": [
+                    "Tostar el pan integral",
+                    "Untar con mantequilla de cacahuete"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Almuerzo",
+              "meals": [
+                {
+                  "name": "Fingers de pescado caseros",
+                  "calories": 250,
+                  "recipe": [
+                    "Cortar el pescado en tiras, rebozar y hornear"
+                  ]
+                },
+                {
+                  "name": "Arroz con guisantes",
+                  "calories": 200,
+                  "recipe": [
+                    "Cocinar el arroz",
+                    "Añadir guisantes cocidos al arroz"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Cena",
+              "meals": [
+                {
+                  "name": "Revuelto de huevo con champiñones",
+                  "calories": 250,
+                  "recipe": [
+                    "Saltear los champiñones",
+                    "Añadir los huevos batidos y remover hasta cuajar"
+                  ]
+                },
+                {
+                  "name": "Tostadas integrales",
+                  "calories": 100,
+                  "recipe": [
+                    "Tostar el pan integral"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "day": "Viernes",
+          "turns": [
+            {
+              "name": "Desayuno",
+              "meals": [
+                {
+                  "name": "Pan de plátano casero",
+                  "calories": 200,
+                  "recipe": [
+                    "Preparar la masa del pan de plátano",
+                    "Hornear el pan"
+                  ]
+                },
+                {
+                  "name": "Vaso de leche",
+                  "calories": 100,
+                  "recipe": [
+                    "Servir un vaso de leche fría o caliente"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Almuerzo",
+              "meals": [
+                {
+                  "name": "Pizza casera con base integral",
+                  "calories": 400,
+                  "recipe": [
+                    "Preparar la masa de pizza integral",
+                    "Añadir salsa de tomate, queso mozzarella y otros ingredientes al gusto",
+                    "Hornear hasta que el queso se derrita"
+                  ]
+                },
+                {
+                  "name": "Ensalada verde",
+                  "calories": 50,
+                  "recipe": [
+                    "Preparar una ensalada con lechuga, tomate y pepino"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Cena",
+              "meals": [
+                {
+                  "name": "Palitos de pollo al horno",
+                  "calories": 250,
+                  "recipe": [
+                    "Cortar la pechuga de pollo en tiras",
+                    "Rebozar las tiras y hornear"
+                  ]
+                },
+                {
+                  "name": "Puré de calabaza",
+                  "calories": 150,
+                  "recipe": [
+                    "Cocinar la calabaza y hacer puré"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "day": "Sábado",
+          "turns": [
+            {
+              "name": "Desayuno",
+              "meals": [
+                {
+                  "name": "Tortitas de avena y plátano",
+                  "calories": 300,
+                  "recipe": [
+                    "Mezclar avena molida con plátano machacado y un poco de leche",
+                    "Cocinar la masa como tortitas en una sartén"
+                  ]
+                },
+                {
+                  "name": "Fruta fresca variada",
+                  "calories": 100,
+                  "recipe": [
+                    "Lavar y cortar fruta fresca variada"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Almuerzo",
+              "meals": [
+                {
+                  "name": "Wrap de pollo con aguacate",
+                  "calories": 350,
+                  "recipe": [
+                    "Cocinar el pollo a la plancha y cortarlo en tiras",
+                    "Preparar el aguacate en rodajas",
+                    "Montar el wrap con pollo, aguacate y lechuga"
+                  ]
+                },
+                {
+                  "name": "Batido de frutas",
+                  "calories": 150,
+                  "recipe": [
+                    "Licuar frutas variadas con un poco de yogur natural"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Cena",
+              "meals": [
+                {
+                  "name": "Quesadillas de queso y pavo",
+                  "calories": 300,
+                  "recipe": [
+                    "Rellenar tortillas con queso y pavo",
+                    "Doblar las tortillas y cocinar en una sartén"
+                  ]
+                },
+                {
+                  "name": "Bastones de zanahoria y pepino",
+                  "calories": 50,
+                  "recipe": [
+                    "Cortar zanahorias y pepino en bastones"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "day": "Domingo",
+          "turns": [
+            {
+              "name": "Desayuno",
+              "meals": [
+                {
+                  "name": "Tostadas francesas",
+                  "calories": 250,
+                  "recipe": [
+                    "Remojar pan en una mezcla de huevo y leche",
+                    "Cocinar el pan remojado en una sartén"
+                  ]
+                },
+                {
+                  "name": "Fruta fresca picada",
+                  "calories": 100,
+                  "recipe": [
+                    "Picar fruta fresca variada"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Almuerzo",
+              "meals": [
+                {
+                  "name": "Espaguetis con albóndigas de pavo",
+                  "calories": 400,
+                  "recipe": [
+                    "Preparar albóndigas con carne picada de pavo",
+                    "Cocinar los espaguetis",
+                    "Hacer una salsa de tomate casera",
+                    "Servir las albóndigas y la salsa sobre los espaguetis"
+                  ]
+                },
+                {
+                  "name": "Ensalada mixta",
+                  "calories": 100,
+                  "recipe": [
+                    "Preparar una ensalada con lechuga, tomate, pepino y zanahoria rallada"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Cena",
+              "meals": [
+                {
+                  "name": "Brochetas de pollo y verduras al horno",
+                  "calories": 300,
+                  "recipe": [
+                    "Cortar el pollo y las verduras en trozos",
+                    "Montar las brochetas alternando pollo y verduras",
+                    "Sazonar y hornear las brochetas"
+                  ]
+                },
+                {
+                  "name": "Arroz integral",
+                  "calories": 150,
+                  "recipe": [
+                    "Cocinar arroz integral"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "additionalNotes": [
+        "Las calorías son aproximadas y deben ajustarse según la edad y necesidades de cada niño.",
+        "Incluir siempre una porción de fruta o verdura en cada comida.",
+        "Mantener una buena hidratación ofreciendo agua regularmente.",
+        "Involucrar a los niños en la preparación de las comidas puede animarlos a probar nuevos alimentos.",
+        "Ajustar las texturas según la edad de los niños, especialmente para el de 2 años.",
+        "Variar los colores y formas de presentación para hacer las comidas más atractivas.",
+        "Recuerda que la persistencia es clave al introducir nuevos alimentos. Puede llevar hasta 15-20 exposiciones para que un niño acepte un nuevo alimento."
+      ]
+    },
+    "shoppingList": [
+      {
+        "category": "Frutas y Verduras",
+        "items": [
+          "Aguacate (2-3)",
+          "Plátano (2 racimos)",
+          "Zanahorias (1 bolsa grande)",
+          "Calabaza (1 mediana)",
+          "Manzanas (6-8)",
+          "Fresas (2 cajas)",
+          "Champiñones (500g)",
+          "Lechuga (2 unidades)",
+          "Tomate (1 kg)",
+          "Pepino (3-4)",
+          "Cebolla (1 bolsa",
+          "Pimiento rojo (2 unidades)",
+          "Pimiento verde (2 unidades)"
+        ]
+    }
+]
+}

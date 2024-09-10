@@ -5,12 +5,16 @@
         </span>
     </div>
     <div class="mb-8">
-        <h3 class="text-2xl font-semibold text-white">{{ $mealsDay['name'] }}</h3>
+        <h3 class="text-2xl font-semibold text-white">{{ $dayData['day'] }}</h3>
     </div>
     <div class="mb-8 space-y-4 text-purple-200">
-        @foreach ($mealsDay['hours'] as $mealHour)
-            {{-- <x-meal-time :mealHour="$mealHour"></x-meal-time> --}}
-            @livewire('meal-time', ['mealHour' => $mealHour])
+        @foreach ($dayData['turns'] as $key => $turn)
+            {{-- @dump($key, $turn) --}}
+            {{-- @dd($turn) --}}
+            {{-- @livewire('meal-time', ['turn' => $turn], key('meal-time-' . $key)) --}}
+            <livewire:meal-time :turn="$turn" wire:key="meal-time-{{ $dayData['day'] }}-{{ $key }}" />
+            {{-- <livewire:meal-time :turn="$turn"
+                wire:key="meal-time-{{ $dayData['day'] }}-{{ $key }}-{{ $loop->index }}" /> --}}
         @endforeach
         <a href="#"
             class="block w-full py-3 px-6 text-center rounded-md text-white font-medium bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
