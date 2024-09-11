@@ -28,8 +28,9 @@ class AnthropicService
         try {
             $response = $this->client->post('messages', [
                 'json' => [
-                    'model' => 'claude-3-sonnet-20240229',
-                    'max_tokens' => 1000,
+                    'model' => 'claude-3-5-sonnet-20240620',
+                    'max_tokens' => 5000,
+                    'temperature' => 0.3, 
                     'messages' => [
                         ['role' => 'user', 'content' => $prompt]
                     ]

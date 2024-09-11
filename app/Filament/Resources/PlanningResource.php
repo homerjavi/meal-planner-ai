@@ -6,7 +6,9 @@ use App\Filament\Resources\PlanningResource\Pages;
 use App\Models\Planning;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Support\Str;
 
 class PlanningResource extends Resource
 {
@@ -36,6 +38,34 @@ class PlanningResource extends Resource
                     ->boolean(),
                 Tables\Columns\IconColumn::make('is_favorite')
                     ->boolean(),
+                    TextColumn::make('data')
+                    ->formatStateUsing(function ($state) {
+                        if (is_string($state)) {
+                            $data = json_decode($state, true);
+                            if (json_last_error() === JSON_ERROR_NONE) {
+                                // El estado es una cadena JSON válida
+                                return Str::limit(json_encode($data, JSON_PRETTY_PRINT), 50);
+                            }
+                        } elseif (is_array($state)) {
+                            // El estado ya es un array (posiblemente ya decodificado)
+                            return Str::limit(json_encode($state, JSON_PRETTY_PRINT), 50);
+                        }
+                        // Si no es JSON ni array, devolver el estado original
+                        return $state;
+                    })
+                    ->sortable()
+                    ->searchable()
+                    ->tooltip(function ($state) {
+                        if (is_string($state)) {
+                            $data = json_decode($state, true);
+                            if (json_last_error() === JSON_ERROR_NONE) {
+                                return json_encode($data, JSON_PRETTY_PRINT);
+                            }
+                        } elseif (is_array($state)) {
+                            return json_encode($state, JSON_PRETTY_PRINT);
+                        }
+                        return $state;
+                    }),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
